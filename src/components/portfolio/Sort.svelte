@@ -1,17 +1,17 @@
 <script>
-    export let styles, sortList, cn
 
-    let current = 0;
+    export let styles, sortList, cn, sort, sortClick
+
 </script>
 
-<div class="flex sort_btns { styles.btns }">
-    { #each sortList as sort, idx}
+<div class="flex { styles.btns }">
+    { #each sortList as sorts, idx}
         <button 
             type="button"
-            class="{cn( { active: current == idx } )}"
-            on:click={ () => current = idx }
+            class="{cn( { active: sort == idx } )}"
+            on:click={sortClick(idx)}
         >
-            {sort}
+            {sorts}
         </button> 
     {/each }
 </div>

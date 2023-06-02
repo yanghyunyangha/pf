@@ -3,14 +3,14 @@
     import Top from "./Top.svelte";
     import List from "./List.svelte";
 
-    export let classNames, items
+    export let classNames, items, portList, sort, sortClick
 
     const cn = classNames.bind(styles);
 </script>
 
 <section class="{ styles.portfolio }">
     <div class="inner { styles.inner }">
-        <Top { styles } { cn } />
+        <Top { styles } { cn } { sort } { sortClick } />
     </div>
-    <List { styles } { items } />
+    <List { styles } { items } { portList } />
 </section>

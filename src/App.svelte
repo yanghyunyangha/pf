@@ -4,33 +4,45 @@
     import Visual from './components/visual/Visual.svelte';
     import Portfolio from './components/portfolio/Portfolio.svelte';
     import { setLayout } from './assets/js/setLayout';
+    import { setBoxLayout } from './assets/js/setBoxLayout';
+    import { ports } from './components/portfolio/portfolio';
 
     let w,
-        items = [];
+        items = [],
+        beforeItems = [],
+        afterItems = [],
+        newItems = [],
+        portList = ports;
+    $: sort = 0;
 
-    function setBoxLayout(duration){
-        const step = Math.floor(w / 300);
-        items.forEach((x, idx) => {
-            let width = w /  step;
-            let row = Math.floor(idx / step);
-            let column = idx % step;
-            x.style.width = `${width}px`;
-            x.style.transform = `translate(${column*width}px, ${row*300}px)`
-        })
+    function sortClick(i){
+        if(sort != i){
+            sort = i;
+            newItems = items;
+            beforeItems = items.filter(ele => ele.dataset.sort == sort);
+            afterItems = items.filter(ele => ele.dataset.sort != sort);
+            newItems = beforeItems.concat(afterItems);
+            setBoxLayout(newItems, w, 0.4);
+        }
     }
 
 </script>
 
 <svelte:window
-    bind:innerWidth={w}
+    on:resize={ () => {
+        w = document.documentElement.clientWidth;
+        setLayout(w);
+        setBoxLayout(newItems, w, 0);
+    } }
     on:load={ () => {
+        w = document.documentElement.clientWidth;
         setLayout(w)
-        setBoxLayout(0);
+        setBoxLayout(items, w, 0);
     } }
 />
 
 <Header { classNames } />
 <Visual { classNames } />
 <main>
-    <Portfolio { classNames } { items } />
+    <Portfolio { classNames } { items } { portList } { sort } { sortClick } />
 </main>

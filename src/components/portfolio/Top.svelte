@@ -1,6 +1,6 @@
 <script>
     import Sort from "./Sort.svelte";
-    export let styles, cn
+    export let styles, cn, sort, sortClick
 
     const sortList = ['All', 'Type', 'Value', 'Etc']
 
@@ -8,5 +8,5 @@
 
 <div class="flex-between { styles.top }">
     <h2 class="{ styles.title }">Title</h2>
-    <Sort { styles } { sortList } { cn } />
+    <Sort { styles } { sortList } { cn } { sort } { sortClick } />
 </div>
