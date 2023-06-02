@@ -5,6 +5,7 @@
     import Portfolio from './components/portfolio/Portfolio.svelte';
     import { setLayout } from './assets/js/setLayout';
     import { setBoxLayout } from './assets/js/setBoxLayout';
+    import { boxOver } from './assets/js/boxOver';
     import { ports } from './components/portfolio/portfolio';
 
     let w,
@@ -26,6 +27,10 @@
         }
     }
 
+    function boxMouse(e, type){
+        boxOver(w, e, type);
+    }
+
 </script>
 
 <svelte:window
@@ -44,5 +49,5 @@
 <Header { classNames } />
 <Visual { classNames } />
 <main>
-    <Portfolio { classNames } { items } { portList } { sort } { sortClick } />
+    <Portfolio { classNames } { items } { portList } { sort } { sortClick } { boxMouse } />
 </main>
