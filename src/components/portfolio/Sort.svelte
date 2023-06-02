@@ -4,7 +4,7 @@
     let current = 0;
 </script>
 
-<div class="sort_btns { styles.btns }">
+<div class="flex sort_btns { styles.btns }">
     { #each sortList as sort, idx}
         <button 
             type="button"

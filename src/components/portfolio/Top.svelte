@@ -6,7 +6,7 @@
 
 </script>
 
-<div class="{ styles.top }">
+<div class="flex-between { styles.top }">
     <h2 class="{ styles.title }">Title</h2>
     <Sort { styles } { sortList } { cn } />
 </div>
