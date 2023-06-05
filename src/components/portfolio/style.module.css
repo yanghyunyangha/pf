@@ -2,7 +2,8 @@
     padding:200px 0
 }
 .top{
-    margin-bottom:80px
+    margin-bottom:80px;
+    align-items:flex-end
 }
 .title{
     font-size:60px;
@@ -13,7 +14,7 @@
     margin-bottom:5px
 }
 .btns button{
-    margin-left:30px;
+    margin-left:40px;
     color:#c6c6c6
 }
 .btns button.active,
