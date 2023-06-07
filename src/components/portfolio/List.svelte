@@ -1,10 +1,10 @@
 <script>
     import Item from "./Item.svelte";
-    export let styles, items, portList, boxMouse
+    export let styles, items, portList, boxMouse, detailShow
 </script>
 
 <ul class="list { styles.list }">
     { #each portList as object, idx}
-        <Item { styles } { items } { object } { idx } { boxMouse } />
+        <Item { styles } { items } { object } { idx } { boxMouse } { detailShow } />
     {/each }
 </ul>

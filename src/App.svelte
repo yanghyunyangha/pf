@@ -15,7 +15,8 @@
         afterItems = [],
         newItems = [],
         portList = ports,
-        detailItem = portList[0];
+        detailItem = portList[0],
+        visible = false;
     $: sort = 0;
 
     function sortClick(i){
@@ -31,6 +32,17 @@
 
     function boxMouse(e, type){
         boxOver(w, e, type);
+    }
+
+    function detailShow(item){
+        detailItem = item;
+        visible = true;
+        document.documentElement.classList.add('forbid_scroll');
+    }
+
+    function detailHide(){
+        visible = false;
+        document.documentElement.classList.remove('forbid_scroll');
     }
 
 </script>
@@ -51,6 +63,8 @@
 <Header { classNames } />
 <Visual { classNames } />
 <main>
-    <Portfolio { classNames } { items } { portList } { sort } { sortClick } { boxMouse } />
+    <Portfolio { classNames } { items } { portList } { sort } { sortClick } { boxMouse } { detailShow } />
 </main>
-<Detail { classNames } { detailItem } />
+{#if visible}
+<Detail { detailItem } { detailHide } />
+{/if}

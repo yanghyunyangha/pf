@@ -3,7 +3,7 @@
     import Top from "./Top.svelte";
     import List from "./List.svelte";
 
-    export let classNames, items, portList, sort, sortClick, boxMouse
+    export let classNames, items, portList, sort, sortClick, boxMouse, detailShow
 
     const cn = classNames.bind(styles);
 </script>
@@ -12,5 +12,5 @@
     <div class="inner { styles.inner }">
         <Top { styles } { cn } { sort } { sortClick } />
     </div>
-    <List { styles } { items } { portList } { boxMouse } />
+    <List { styles } { items } { portList } { boxMouse } { detailShow } />
 </section>
