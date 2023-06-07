@@ -6,7 +6,7 @@
 
 <li 
     class="box"
-    data-sort="{ (idx % 3) + 1 }"
+    data-sort="{ object.type }"
     bind:this={items[idx]}
     on:mouseenter={ e => boxMouse(e, 'enter') }
     on:mouseleave={ e => boxMouse(e, 'leave') }
