@@ -60,6 +60,7 @@
 .title{
     justify-content:flex-start;
     align-items:flex-end;
+    flex-wrap:wrap;
     margin-bottom:40px;
     line-height:1.6
 }
@@ -78,6 +79,7 @@
     position:relative;
     padding-left:15px;
     font-variation-settings:'wght' 500;
+    pointer-events:auto
 }
 .more span{
     position:absolute;

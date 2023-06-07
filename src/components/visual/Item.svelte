@@ -2,7 +2,7 @@
     import Text from "./Text.svelte";
     import Img from "./Img.svelte";
 
-    export let item, idx, styles, cn
+    export let item, idx, styles, cn;
 
     const list = {
         item: item,

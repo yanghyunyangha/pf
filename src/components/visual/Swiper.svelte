@@ -3,7 +3,7 @@
     import { Swiper, SwiperSlide } from "swiper/svelte";
     import Item from "./Item.svelte";
 
-    export let styles, items, cn
+    export let styles, items, cn;
 </script>
 
 <Swiper

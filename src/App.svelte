@@ -38,6 +38,7 @@
         detailItem = item;
         visible = true;
         document.documentElement.classList.add('forbid_scroll');
+        console.log('a')
     }
 
     function detailHide(){
