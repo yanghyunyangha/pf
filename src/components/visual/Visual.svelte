@@ -3,7 +3,7 @@
     import Swiper from './Swiper.svelte';
     import { visual } from './visual';
 
-    export let classNames;
+    export let classNames, w;
 
     const cn = classNames.bind(styles);
     const visuals = visual;
@@ -12,7 +12,7 @@
 
 <section class="{ styles.visual }">
     <h2 class="blind">메인 스와이퍼</h2>
-    <Swiper { styles } { cn } items={ visuals } />
+    <Swiper { styles } { cn } items={ visuals } { w } />
     <div class="swiper-pagination flex-center { styles.paging }">
         
     </div>

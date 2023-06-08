@@ -4,9 +4,9 @@
     import List from './List.svelte';
 </script>
 
-<div class="{ styles.about }">
+<section class="{ styles.about }">
     <div class="inner { styles.inner }">
         <Top { styles } />
         <List { styles} />
     </div>
-</div>
+</section>

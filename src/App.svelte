@@ -63,7 +63,7 @@
 />
 
 <Header { classNames } />
-<Visual { classNames } />
+<Visual { classNames } { w } />
 <main>
     <About />
     <Portfolio { classNames } { items } { portList } { sort } { sortClick } { boxMouse } { detailShow } />

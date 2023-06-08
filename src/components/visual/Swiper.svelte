@@ -3,7 +3,7 @@
     import { Swiper, SwiperSlide } from "swiper/svelte";
     import Item from "./Item.svelte";
 
-    export let styles, items, cn;
+    export let styles, items, cn, w;
 </script>
 
 <Swiper
@@ -20,7 +20,7 @@
 >
     { #each items as item, idx }
         <SwiperSlide>
-            <Item { item } { idx } { styles } { cn } />
+            <Item { item } { idx } { styles } { cn } { w } />
         </SwiperSlide>
     { /each }
 </Swiper>
