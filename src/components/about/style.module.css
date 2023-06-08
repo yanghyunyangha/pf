@@ -1,0 +1,11 @@
+.about{
+    padding:200px 0
+}
+.top{
+    margin-bottom:80px;
+    align-items:flex-end
+}
+.title{
+    font-size:60px;
+    font-variation-settings:'wght' 750
+}

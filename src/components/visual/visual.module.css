@@ -10,7 +10,7 @@
     left:0;
     right:0;
     bottom:0;
-    background:no-repeat 50% / cover;
+    background:#000 no-repeat 50% / cover;
     filter:brightness(0.6);
     z-index:-1
 }
@@ -33,16 +33,16 @@
 }
 
 .item01 .bg{
-    background-image:url(../../assets/images/visual/bg_airclean.webp)
+    /* background-image:url(../../assets/images/visual/bg_airclean.webp) */
 }
 .item02 .bg{
-    background-image:url(../../assets/images/visual/bg_isabang.webp)
+    /* background-image:url(../../assets/images/visual/bg_isabang.webp) */
 }
 .item03 .bg{
-    background-image:url(../../assets/images/visual/bg_mkfly.webp)
+    /* background-image:url(../../assets/images/visual/bg_mkfly.webp) */
 }
 .item04 .bg{
-    background-image:url(../../assets/images/visual/bg_jejuchanga.webp)
+    /* background-image:url(../../assets/images/visual/bg_jejuchanga.webp) */
 }
 
 .content{

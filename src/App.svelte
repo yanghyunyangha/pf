@@ -2,6 +2,7 @@
     import classNames from 'classnames/bind'
     import Header from "./components/header/Header.svelte";
     import Visual from './components/visual/Visual.svelte';
+    import About from './components/about/About.svelte';
     import Portfolio from './components/portfolio/Portfolio.svelte';
     import Detail from './components/detail/Detail.svelte';
     import { setLayout } from './assets/js/setLayout';
@@ -64,6 +65,7 @@
 <Header { classNames } />
 <Visual { classNames } />
 <main>
+    <About />
     <Portfolio { classNames } { items } { portList } { sort } { sortClick } { boxMouse } { detailShow } />
 </main>
 {#if visible}
