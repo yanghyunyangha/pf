@@ -143,7 +143,7 @@ body{
     margin:0 auto
 }
 main .inner{
-    padding:0 100px
+    padding:0 150px
 }
 .title{
     font-size:60px;
@@ -155,6 +155,20 @@ main .inner{
 }
 .txt-up{
     overflow:hidden
+}
+.bgline{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-template-rows:1fr;
+    z-index:-1
+}
+.bgline span:nth-child(n+1){
+    border-left:1px solid rgba(239, 239, 239, .8)
 }
 
 @media (max-width:1500px){

@@ -1,12 +1,10 @@
 .portfolio{
+    position:relative;
     padding:200px 0
 }
 .top{
     margin-bottom:80px;
     align-items:flex-end
-}
-.title{
-    
 }
 
 .btns{
