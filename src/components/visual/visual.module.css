@@ -10,7 +10,7 @@
     left:0;
     right:0;
     bottom:0;
-    background:#000 no-repeat 50% / cover;
+    background:no-repeat 50% / cover;
     filter:brightness(0.6);
     z-index:-1
 }
@@ -33,16 +33,16 @@
 }
 
 .item01 .bg{
-    /* background-image:url(../../assets/images/visual/bg_airclean.webp) */
+    background-image:url(../../assets/images/visual/bg_airclean.webp)
 }
 .item02 .bg{
-    /* background-image:url(../../assets/images/visual/bg_isabang.webp) */
+    background-image:url(../../assets/images/visual/bg_isabang.webp)
 }
 .item03 .bg{
-    /* background-image:url(../../assets/images/visual/bg_mkfly.webp) */
+    background-image:url(../../assets/images/visual/bg_mkfly.webp)
 }
 .item04 .bg{
-    /* background-image:url(../../assets/images/visual/bg_jejuchanga.webp) */
+    background-image:url(../../assets/images/visual/bg_jejuchanga.webp)
 }
 
 .content{
@@ -64,6 +64,10 @@
     margin-bottom:40px;
     line-height:1.6
 }
+.title p{
+    transform:translateY(100%);
+    transition:transform 1s
+}
 .name{
     font-size:60px;
     margin-right:20px;
@@ -77,20 +81,25 @@
 
 .more{
     position:relative;
+    display:inline-block;
     padding-left:15px;
     font-variation-settings:'wght' 500;
-    pointer-events:auto
+    transform:translateY(50px);
+    opacity:0;
+    transition:all 1s ease 0.2s
 }
-.more span{
+.more .clip{
     position:absolute;
     left:15px;
     top:50%;
     transform:translateY(-50%);
     clip-path:circle(35px at 0 0);
     color:var(--color);
-    z-index:1
+    z-index:1;
+    opacity:0;
+    transition:opacity 0.8s ease 0.4s
 }
-.more::after{
+.more .circle{
     content:"";
     position:absolute;
     width:50px;
@@ -99,7 +108,8 @@
     top:50%;
     border-radius:50%;
     background:#fff;
-    transform:translateY(-50%)
+    transform:translateY(-50%) scale(0);
+    transition:transform 0.8s ease 0.4s
 }
 
 .img{
@@ -163,10 +173,6 @@
     .type{
         font-size:1.6vw
     }
-    .more{
-        transform-origin:0 50%;
-        transform:scale(0.9)
-    }
     .pc{
         width:56.6vw;
         height:33.3vw
@@ -189,14 +195,13 @@
         margin-bottom:0.5rem
     }
     .more{
-        transform:scale(1);
         padding-left:1rem
     }
-    .more span{
+    .more .clip{
         left:1rem;
         clip-path:circle(2.5rem at 0 0)
     }
-    .more::after{
+    .more .circle{
         width:3.5rem;
         height:3.5rem
     }
@@ -232,11 +237,11 @@
         font-size:1.3rem;
         padding-left:1.5rem
     }
-    .more span{
+    .more .clip{
         left:1.5rem;
         clip-path:circle(3rem at 0 0)
     }
-    .more::after{
+    .more .circle{
         width:4.5rem;
         height:4.5rem
     }
@@ -254,5 +259,32 @@
     }
     .type{
         font-size:1.8rem
+    }
+}
+@media (max-width:400px){
+    .item{
+        padding:10rem 0
+    }
+    .title{
+        margin-bottom:1.5rem
+    }
+    .name{
+        font-size:3.8rem
+    }
+    .type{
+        font-size:1.8rem
+    }
+    .more .clip{
+        clip-path:circle(2.5rem at 0 0)
+    }
+    .more .circle{
+        width:4rem;
+        height:4rem
+    }
+    .mobile{
+        position:static;
+        width:80%;
+        height:123vw;
+        margin:0 auto
     }
 }

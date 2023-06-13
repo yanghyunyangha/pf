@@ -4,16 +4,21 @@
 
 <div class="{ styles.txt }">
     <div class="flex { styles.title }">
-        <p class="{ styles.name }">{ item.name }</p>
-        <p class="{ styles.type }">
-            {#if item.type == 1} Website
-            {:else if item.type == 2} Landing
-            {:else} Script
-            {/if}
-        </p>
+        <div class="txt-up { styles.name }">
+            <p class="name">{ item.name }</p>
+        </div>
+        <div class="txt-up { styles.type }">
+            <p class="type">
+                {#if item.type == 1} Website
+                {:else if item.type == 2} Landing
+                {:else} Script
+                {/if}
+            </p>
+        </div>
     </div>
-    <a href="{ item.url }" class="{ styles.more }" target="_blank">
+    <a href="{ item.url }" class="more { styles.more }" target="_blank">
         View Site
-        <span>View Site</span>
+        <span class="clip { styles.clip }">View Site</span>
+        <span class="circle { styles.circle }"></span>
     </a>
 </div>

@@ -96,8 +96,7 @@ img{
     position:relative;
     display:flex;
     width:100%;
-    height:100%;
-    transition-property:transform, opacity
+    height:100%
 }
 .swiper-slide{
     position:relative;
@@ -106,10 +105,27 @@ img{
     flex-shrink:0;
     overflow:hidden;
     touch-action:none;
-    z-index:10;
+    pointer-events:none
+}
+.swiper-slide-active{
+    pointer-events:auto
 }
 .swiper-pagination .active::after{
     background:var(--theme)
+}
+
+.swiper-slide-visible .txt-up p{
+    transform:translateY(0)
+}
+.swiper-slide-visible .more{
+    transform:translateY(0);
+    opacity:1
+}
+.swiper-slide-visible .more .clip{
+    opacity:1
+}
+.swiper-slide-visible .more .circle{
+    transform:translateY(-50%) scale(1)
 }
 
 html, 
@@ -126,6 +142,10 @@ body{
 .inner{
     max-width:1600px;
     margin:0 auto
+}
+
+.txt-up{
+    overflow:hidden
 }
 
 @media (max-width:1200px){
@@ -153,5 +173,11 @@ body{
     html,
     body{
         font-size:9px
+    }
+}
+@media (max-width:400px){
+    html,
+    body{
+        font-size:8px
     }
 }
