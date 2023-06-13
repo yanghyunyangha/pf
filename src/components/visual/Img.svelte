@@ -1,12 +1,8 @@
 <script>
-    export let item, styles, w;
+    export let item, styles;
 </script>
 
 <div class="{ styles.img }">
-    {#if w > 400}
-    <div class="{ styles.pc }"><img src="{item.pcImg}" alt=""></div>
-    {/if}
-    {#if w > 800 || w <= 400}
-    <div class="{ styles.mobile }"><img src="{item.moImg}" alt=""></div>
-    {/if}
+    <div class="{ styles.pc }"><img src="{item.pcImg}" alt="pc 미리보기"></div>
+    <div class="{ styles.mobile }"><img src="{item.moImg}" alt="모바일 미리보기"></div>
 </div>

@@ -57,22 +57,20 @@
 .txt{
     color:#fff
 }
-.title{
+.sitename{
     justify-content:flex-start;
     align-items:flex-end;
     flex-wrap:wrap;
     margin-bottom:40px;
     line-height:1.6
 }
-.title p{
+.sitename p{
     transform:translateY(100%);
     transition:transform 1s
 }
-.name{
-    font-size:60px;
+.title{
     margin-right:20px;
-    line-height:1;
-    font-variation-settings:'wght' 750;
+    line-height:1
 }
 .type{
     font-size:24px;
@@ -163,11 +161,10 @@
     .content{
         padding:0 6.6vw
     }
-    .title{
+    .sitename{
         margin-bottom:2.6vw
     }
-    .name{
-        font-size:4vw;
+    .title{
         margin-right:1.3vw
     }
     .type{
@@ -190,7 +187,7 @@
     .item{
         padding:15rem 0
     }
-    .name{
+    .title{
         width:100%;
         margin-bottom:0.5rem
     }
@@ -222,12 +219,11 @@
         width:14.2rem;
         height:25rem
     }
-    .title{
+    .sitename{
         margin-bottom:3rem
     }
-    .name{
+    .title{
         width:auto;
-        font-size:5rem;
         margin-right:2rem
     }
     .type{
@@ -246,6 +242,13 @@
         height:4.5rem
     }
 }
+@media (max-width:800px){
+    .mobile{
+        visibility:hidden;
+        opacity:0;
+        z-index:-1
+    }
+}
 @media (max-width:640px){
     .img{
         width:100%
@@ -253,9 +256,6 @@
     .pc{
         width:100%;
         height:46.5vw
-    }
-    .name{
-        font-size:4.2rem
     }
     .type{
         font-size:1.8rem
@@ -265,26 +265,47 @@
     .item{
         padding:10rem 0
     }
-    .title{
-        margin-bottom:1.5rem
+    .txt{
+        display:flex;
+        align-items:center;
+        justify-content:space-around;
+        flex-wrap:wrap;
+        width:100%
     }
-    .name{
-        font-size:3.8rem
+    .sitename{
+        flex-direction:column;
+        align-items:flex-start;
+        margin-bottom:0;
+    }
+    .title{
+        margin:0
     }
     .type{
         font-size:1.8rem
     }
-    .more .clip{
-        clip-path:circle(2.5rem at 0 0)
+    .more{
+        position:absolute;
+        visibility:hidden;
+        opacity:0;
+        z-index:-1
     }
-    .more .circle{
-        width:4rem;
-        height:4rem
+    .more_img{
+        width:10vw;
+        filter:brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(79deg) brightness(114%) contrast(101%);
+    }
+    .pc{
+        position:absolute;
+        visibility:hidden;
+        opacity:0;
+        z-index:-1
     }
     .mobile{
         position:static;
         width:80%;
         height:123vw;
-        margin:0 auto
+        margin:0 auto;
+        visibility:visible;
+        opacity:1;
+        z-index:1
     }
 }

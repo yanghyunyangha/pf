@@ -1,10 +1,11 @@
 <script>
-    export let item, styles
+    import enter from '@images/visual/enter.png';
+    export let item, styles, w
 </script>
 
 <div class="{ styles.txt }">
-    <div class="flex { styles.title }">
-        <div class="txt-up { styles.name }">
+    <div class="flex { styles.sitename }">
+        <div class="txt-up title { styles.title }">
             <p class="name">{ item.name }</p>
         </div>
         <div class="txt-up { styles.type }">
@@ -21,4 +22,9 @@
         <span class="clip { styles.clip }">View Site</span>
         <span class="circle { styles.circle }"></span>
     </a>
+    {#if w <= 400}
+    <a href="{ item.url }" class="{ styles.more_img }" target="_blank">
+        <img src="{ enter }" alt="사이트 바로가기">
+    </a>
+    {/if}
 </div>

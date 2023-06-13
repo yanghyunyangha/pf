@@ -4,18 +4,18 @@
 
 <div class="flex-between { styles.list }">
     <dl>
-        <dt>PC</dt>
-        <dd>abcdadef</dd>
-        <dd class="{ styles.num } bold">01</dd>
+        <dt class="medium">Project</dt>
+        <dd class="light">HTML, php, asp, Svelte</dd>
+        <dd class="{ styles.num }">01</dd>
     </dl>
     <dl>
-        <dt>Mobile</dt>
-        <dd>abcdadef</dd>
-        <dd class="{ styles.num } bold">02</dd>
+        <dt class="medium">Styles</dt>
+        <dd class="light">CSS, Scss, SASS, CSS-Module</dd>
+        <dd class="{ styles.num }">02</dd>
     </dl>
     <dl>
-        <dt>Responsive</dt>
-        <dd>abcdadef</dd>
-        <dd class="{ styles.num } bold">03</dd>
+        <dt class="medium">Script</dt>
+        <dd class="light">Javascript, jQuery, Node.js</dd>
+        <dd class="{ styles.num }">03</dd>
     </dl>
 </div>

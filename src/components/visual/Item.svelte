@@ -13,7 +13,7 @@
 <div class="{ cn(styles.item, `item0${idx+1}`) } item{idx+1}">
     <div class="{ styles.bg }"></div>
     <div class="flex-between { styles.content }">
-        <Text { ...list } />
-        <Img { ...list } { w } />
+        <Text { ...list } { w } />
+        <Img { ...list } />
     </div>
 </div>
