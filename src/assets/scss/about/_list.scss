@@ -35,7 +35,7 @@ dt{
     }
 }
 .num{
-    @include vars.flex();
+    @include vars.flex(flex-start, flex-start, row, nowrap);
     position:absolute;
     top:0;
     left:0;

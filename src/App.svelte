@@ -62,11 +62,17 @@
 <svelte:window
     on:resize={ () => {
         w = document.documentElement.clientWidth;
+        if(w <= 1200){
+            lenis.destroy()
+        }
         // setLayout(w);
         // sort == 0? setBoxLayout(items, w, 0): setBoxLayout(newItems, w, 0);
     } }
     on:load={ () => {
         w = document.documentElement.clientWidth;
+        if(w <= 1200){
+            lenis.destroy()
+        }
         // setLayout(w)
         // setBoxLayout(items, w, 0);
     } }
