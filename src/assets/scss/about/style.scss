@@ -1,8 +1,6 @@
 @use '../common/variables' as vars;
 
 .about{
-    position:relative;
-    padding:200px 0;
     .inner{
         @include vars.flex(space-between)
     }
@@ -11,7 +9,6 @@
     @import './list';
 
     @include vars.tablet{
-        padding:15rem 0;
         .list{
             width:60%
         }
@@ -50,7 +47,6 @@
     }
 
     @include vars.custom(400px){
-        padding:10rem 0;
         dl:nth-child(-n+2){
             margin-bottom:4rem
         }

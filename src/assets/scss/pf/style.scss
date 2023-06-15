@@ -1,0 +1,64 @@
+@use '/src/assets/scss/common/variables' as vars;
+
+.portfolio{
+    .top{
+        @include vars.flex(space-between, flex-end);
+        margin-bottom:80px
+    }
+    .caption{
+        font-size:24px
+    }
+
+    .list{
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-auto-rows:10px;
+        gap:18px 50px
+    }
+    li{
+        grid-row-end:span 13;
+        &:first-child{
+            margin-top:56px;
+            grid-row-end:span 15
+        }
+        &:nth-child(3){
+            margin-top:140px;
+            grid-row-end:span 18
+        }
+        button{
+            position:relative;
+            width:100%;
+            height:100%;
+            background:gray;
+            overflow:hidden;
+            box-shadow:5px 5px 8px rgba(1,1,1,.23)
+        }
+        .thumnail{
+            width:100%;
+            height:100%
+        }
+        .card{
+            @include vars.flex(center, center);
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            font-size:24px;
+            background:rgba(237, 96, 117, .7);
+            transform:translateX(-100%)
+        }
+        .type{
+            padding:10px 23px;
+            border-radius:20px;
+            font-size:16px;
+            @include vars.border(#000);
+            margin:0 auto 15px
+        }
+        .icon{
+            position:absolute;
+            bottom:25px;
+            right:20px
+        }
+    }
+}

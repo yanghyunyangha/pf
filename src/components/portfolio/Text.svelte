@@ -1,7 +1,7 @@
 <script>
-    export let styles, object
+    export let object
 </script>
 
-<div class="flex-center { styles.txt }">
+<div class="thumnail">
     {object.name}
 </div>

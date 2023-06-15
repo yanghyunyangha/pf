@@ -8,7 +8,7 @@
     import { setLayout } from './assets/js/setLayout';
     import { setBoxLayout } from './assets/js/setBoxLayout';
     import { boxOver } from './assets/js/boxOver';
-    import { ports } from './components/portfolio/portfolio';
+    import { ports } from './assets/js/portfolio';
     import { scrollActive } from "./assets/js/scrollActive";
 
     let w,
@@ -85,7 +85,7 @@
 <Visual { w } />
 <main class="main">
     <About />
-    <!-- <Portfolio { items } { portList } { sort } { sortClick } { boxMouse } { detailShow } /> -->
+    <Portfolio { items } { portList } { boxMouse } { detailShow } />
 </main>
 <!-- {#if visible}
 <Detail { detailItem } { detailHide } />
