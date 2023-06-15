@@ -1,0 +1,10 @@
+.top{
+    margin-bottom:80px
+}
+.caption{
+    font-size:24px;
+    margin-top:10px
+}
+&.active .txt-up p{
+    transform:translateY(0)
+}

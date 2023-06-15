@@ -1,0 +1,109 @@
+@use './variables' as vars;
+@import './fonts';
+@import './reset';
+
+.blind{
+    font-size:0;
+    line-height:0;
+    text-indent:-999px
+}
+.light{
+    @include vars.fontWeight(300)
+}
+.medium{
+    @include vars.fontWeight(500)
+}
+.bold{
+    @include vars.fontWeight(700)
+}
+
+.swiper-pagination .active::after{
+    background:vars.$theme
+}
+
+html, 
+body{
+    font:400 16px/1 'mont', 'pre';
+	@include vars.fontWeight(400);
+	color:#272727;
+	letter-spacing:-.04em;
+	word-break: keep-all;
+	touch-action:manipulation;
+    overflow-x:hidden;
+    @include vars.tablet{
+        font-size:12px
+    }
+    @include vars.custom(900px){
+        font-size:11px
+    }
+    @include vars.mobile{
+        font-size:10px
+    }
+    @include vars.custom(580px){
+        font-size:9px
+    }
+    @include vars.custom(400px){
+        font-size:8px
+    }
+}
+#app{
+    @include vars.tablet{
+        font-size:1rem
+    }
+}
+.inner{
+    max-width:1600px;
+    margin:0 auto
+}
+.main{
+    .inner{
+        padding:0 150px;
+        @include vars.custom(1500px){
+            padding:0 6.6vw
+        }
+    }
+}
+.title{
+    font-size:60px;
+    font-variation-settings:'wght' 750;
+    @include vars.custom(900px){
+        font-size:5rem !important
+    }
+    @include vars.custom(640px){
+        font-size:4.2rem !important
+    }
+    @include vars.custom(400px){
+        font-size:3.8rem !important
+    }
+}
+.caption{
+    font-size:18px;
+    color:#c6c6c6
+}
+.txt-up{
+    overflow:hidden
+}
+.txt-up > *{
+    transform:translateY(100%);
+    @include vars.transitionDefault(transform, 1s)
+}
+.bgline{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-template-rows:1fr;
+    z-index:-1;
+    @include vars.custom(900px){
+        grid-template-columns:repeat(4, 1fr);
+    }
+    @include vars.custom(400px){
+        grid-template-columns:repeat(3, 1fr);
+    }
+}
+.bgline span:nth-child(n+1){
+    border-left:1px solid rgba(0,0,0,.05)
+}

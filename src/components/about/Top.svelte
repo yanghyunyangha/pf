@@ -1,8 +1,4 @@
-<script>
-    export let styles;
-</script>
-
-<div class="{ styles.top }">
-    <h2 class="title { styles.title }">About</h2>
-    <p class="caption { styles.caption }">My skills</p>
+<div class="top">
+    <h2 class="title txt-up"><p>About</p></h2>
+    <div class="caption txt-up"><p>My skills</p></div>
 </div>

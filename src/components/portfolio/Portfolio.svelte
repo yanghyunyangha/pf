@@ -2,7 +2,7 @@
     import styles from "./style.module.css"
     import Top from "./Top.svelte";
     import List from "./List.svelte";
-    import Bgline from "../about/Bgline.svelte";
+    import Bg from "../about/Bg.svelte";
 
     export let classNames, items, portList, sort, sortClick, boxMouse, detailShow
 
@@ -14,5 +14,5 @@
         <Top { styles } { cn } { sort } { sortClick } />
     </div>
     <List { styles } { items } { portList } { boxMouse } { detailShow } />
-    <Bgline />
+    <Bg />
 </section>

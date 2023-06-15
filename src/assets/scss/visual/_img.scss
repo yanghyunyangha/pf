@@ -1,0 +1,22 @@
+.img{
+    position:relative;
+    & > *{
+        border-radius:10px;
+        overflow:hidden
+    }
+    .pc{
+        width:850px;
+        height:500px;
+        background:#f1f1f1;
+        box-shadow:15px 15px 15px rgba(0,0,0,.1);
+    }
+    .mobile{
+        position:absolute;
+        right:-50px;
+        bottom:-50px;
+        width:200px;
+        height:350px;
+        background:#c1c1c1;
+        box-shadow:0 0 25px rgba(0,0,0,.4);
+    }
+}

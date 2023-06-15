@@ -1,20 +1,17 @@
 <script>
-    import { Pagination, EffectFade, Autoplay } from "swiper";
-    import { Swiper, SwiperSlide } from "swiper/svelte";
     import Item from "./Item.svelte";
-
-    export let styles, items, cn, w;
-
+    import Pager from "./Pager.svelte";
+    export let items, w;
 </script>
 
-<Swiper
-    modules={[Pagination, EffectFade, Autoplay]}
+<swiper-container
     effect='fade'
+    space-between={1}
     speed={800}
     loop={true}
     autoplay={{
-        delay: 3000,
-        disableOnInteraction: true
+        delay:3000,
+        disableOnInteraction:false
     }}
     pagination={{
         el: '.swiper-pagination',
@@ -23,9 +20,10 @@
         bulletActiveClass: 'active'
     }}
 >
-    { #each items as item, idx }
-        <SwiperSlide>
-            <Item { item } { idx } { styles } { cn } { w } />
-        </SwiperSlide>
-    { /each }
-</Swiper>
+    { #each items as item, idx}
+        <swiper-slide>
+            <Item { item } { idx } { w } />
+        </swiper-slide>
+    {/each }
+</swiper-container>
+<Pager />

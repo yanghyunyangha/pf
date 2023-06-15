@@ -1,19 +1,16 @@
 <script>
-    import styles from './visual.module.css'
+    import '@scss/visual/style.scss';
+    import { register } from 'swiper/element/bundle';
     import Swiper from './Swiper.svelte';
-    import { visual } from './visual';
+    import { visual } from '../../assets/js/visual'
 
-    export let classNames, w;
+    export let w;
 
-    const cn = classNames.bind(styles);
+    register();
     const visuals = visual;
-
 </script>
 
-<section class="{ styles.visual }">
+<section class="visual">
     <h2 class="blind">메인 스와이퍼</h2>
-    <Swiper { styles } { cn } items={ visuals } { w } />
-    <div class="swiper-pagination flex-center { styles.paging }">
-        
-    </div>
+    <Swiper items={ visuals } { w } />
 </section>

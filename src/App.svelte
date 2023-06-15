@@ -1,14 +1,15 @@
 <script>
-    import classNames from 'classnames/bind'
     import Header from "./components/header/Header.svelte";
     import Visual from './components/visual/Visual.svelte';
     import About from './components/about/About.svelte';
     import Portfolio from './components/portfolio/Portfolio.svelte';
     import Detail from './components/detail/Detail.svelte';
+    import Lenis from "@studio-freight/lenis";
     import { setLayout } from './assets/js/setLayout';
     import { setBoxLayout } from './assets/js/setBoxLayout';
     import { boxOver } from './assets/js/boxOver';
     import { ports } from './components/portfolio/portfolio';
+    import { scrollActive } from "./assets/js/scrollActive";
 
     let w,
         items = [],
@@ -19,6 +20,15 @@
         detailItem = portList[0],
         visible = false;
     $: sort = 0;
+
+    const lenis = new Lenis({
+        duration: 0.6
+    });
+    function raf(time){
+		lenis.raf(time);
+		requestAnimationFrame(raf)
+	}
+	requestAnimationFrame(raf);
 
     function sortClick(i){
         if(sort != i){
@@ -52,22 +62,25 @@
 <svelte:window
     on:resize={ () => {
         w = document.documentElement.clientWidth;
-        setLayout(w);
-        sort == 0? setBoxLayout(items, w, 0): setBoxLayout(newItems, w, 0);
+        // setLayout(w);
+        // sort == 0? setBoxLayout(items, w, 0): setBoxLayout(newItems, w, 0);
     } }
     on:load={ () => {
         w = document.documentElement.clientWidth;
-        setLayout(w)
-        setBoxLayout(items, w, 0);
+        // setLayout(w)
+        // setBoxLayout(items, w, 0);
+    } }
+    on:scroll={ () => {
+        const scts = document.querySelectorAll('.main section');
+        scrollActive(scts);
     } }
 />
 
-<Header { classNames } />
-<Visual { classNames } { w } />
-<main>
+<Visual { w } />
+<main class="main">
     <About />
-    <Portfolio { classNames } { items } { portList } { sort } { sortClick } { boxMouse } { detailShow } />
+    <!-- <Portfolio { items } { portList } { sort } { sortClick } { boxMouse } { detailShow } /> -->
 </main>
-{#if visible}
+<!-- {#if visible}
 <Detail { detailItem } { detailHide } />
-{/if}
+{/if} -->

@@ -1,8 +1,14 @@
 <script>
-    export let item, styles;
+    export let item, w
 </script>
 
-<div class="{ styles.img }">
-    <div class="{ styles.pc }"><img src="{item.pcImg}" alt="pc 미리보기"></div>
-    <div class="{ styles.mobile }"><img src="{item.moImg}" alt="모바일 미리보기"></div>
+<div class="img">
+    {#if w > 800}
+        <div class="pc"><img src="{item.pcImg}" alt="사이트 미리보기"></div>
+        <div class="mobile"><img src="{item.moImg}" alt="사이트 미리보기"></div>
+    {:else if w > 400}
+        <div class="pc"><img src="{item.pcImg}" alt="사이트 미리보기"></div>
+    {:else if w <= 400}
+        <div class="mobile"><img src="{item.moImg}" alt="사이트 미리보기"></div>
+    {/if}
 </div>

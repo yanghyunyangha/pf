@@ -1,19 +1,14 @@
 <script>
-    import Text from "./Text.svelte";
+    import Info from "./Info.svelte";
     import Img from "./Img.svelte";
 
-    export let item, idx, styles, cn, w;
-
-    const list = {
-        item: item,
-        styles: styles
-    }
+    export let item, idx, w;
 </script>
 
-<div class="{ cn(styles.item, `item0${idx+1}`) } item{idx+1}">
-    <div class="{ styles.bg }"></div>
-    <div class="flex-between { styles.content }">
-        <Text { ...list } { w } />
-        <Img { ...list } />
+<div class="item item{idx+1}">
+    <div class="bg"></div>
+    <div class="content">
+        <Info { item } { w } />
+        <Img { item } { w } />
     </div>
 </div>

@@ -1,25 +1,28 @@
 {
-  "name": "pf",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "homepage": "https://yanghyunyangha.github.io/pf/",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.4",
-    "gh-pages": "^5.0.0",
-    "svelte": "^3.58.0",
-    "vite": "^4.3.9"
-  },
-  "dependencies": {
-    "classnames": "^2.3.2",
-    "gsap": "^3.11.5",
-    "swiper": "8.2.4"
-  }
+    "name": "pf",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "homepage": "https://yanghyunyangha.github.io/pf/",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d dist"
+    },
+    "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "^2.0.4",
+        "gh-pages": "^5.0.0",
+        "sass": "^1.63.4",
+        "svelte": "^3.58.0",
+        "svelte-preprocess": "^5.0.4",
+        "vite": "^4.3.9"
+    },
+    "dependencies": {
+        "@studio-freight/lenis": "^1.0.16",
+        "gsap": "^3.11.5",
+        "swiper": "^9.4.1"
+    },
+    "packageManager": "yarn@3.6.0"
 }

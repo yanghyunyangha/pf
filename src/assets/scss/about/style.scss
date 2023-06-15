@@ -1,0 +1,71 @@
+@use '../common/variables' as vars;
+
+.about{
+    position:relative;
+    padding:200px 0;
+    .inner{
+        @include vars.flex(space-between)
+    }
+    
+    @import './top';
+    @import './list';
+
+    @include vars.tablet{
+        padding:15rem 0;
+        .list{
+            width:60%
+        }
+    }
+
+    @include vars.custom(900px){
+        .inner{
+            display:block
+        }
+        .top{
+            @include vars.flex(flex-start, flex-end);
+            margin-bottom:6rem
+        }
+        .caption{
+            font-size:2rem;
+            margin:0 0 0.5rem 2rem
+        }
+        .list{
+            width:100%;
+        }
+        dl:nth-child(-n+2){
+            margin-bottom:6rem
+        }
+        dt{
+            font-size:2rem
+        }
+        .txt{
+            font-size:1.5rem
+        }
+    }
+
+    @include vars.custom(640px){
+        .num{
+            font-size:15rem
+        }
+    }
+
+    @include vars.custom(400px){
+        padding:10rem 0;
+        dl:nth-child(-n+2){
+            margin-bottom:4rem
+        }
+        dt{
+            margin-bottom:1rem;
+            .icon{
+                width:2.8rem;
+                margin-right:1rem
+            }
+        }
+        .txt{
+            padding-left:1.5rem
+        }
+        .num{
+            font-size:12rem
+        }
+    }
+}

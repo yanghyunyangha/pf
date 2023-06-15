@@ -1,0 +1,27 @@
+.bg{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:no-repeat 50% / cover;
+    filter:brightness(0.5);
+    z-index:-1
+}
+.item{
+    width:100%;
+    height:100%;
+    padding:10rem 0
+}
+$colors: (#00a77c, #0067c6, #4f13cd, #ff6c00);
+$items: ('airclean', 'isabang', 'mkfly', 'jejuchanga');
+@each$item in $items {
+    $idx: index($items, $item);
+    $color:nth($colors, $idx);
+    .item#{$idx}{
+        --color:#{$color};
+        .bg{
+            background-image:url(/src/assets/images/visual/bg_#{$item}.webp)
+        }
+    }
+}

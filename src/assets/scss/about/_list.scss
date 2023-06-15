@@ -1,0 +1,75 @@
+.list{
+    @include vars.flex(flex-end);
+    width:55%
+}
+dl{
+    position:relative;
+    width:50%;
+    z-index:1;
+    &:nth-child(-n+2){
+        margin-bottom:100px;
+    }
+}
+dt{
+    @include vars.flex(flex-start, center);
+    font-size:24px;
+    margin-bottom:20px;
+    transform:translateX(50px);
+    opacity:0;
+    @include vars.transitionDefault((transform, opacity));
+    .icon{
+        width:32px;
+        height:auto;
+        margin-right:10px;
+        filter:brightness(0) saturate(100%) invert(52%) sepia(81%) saturate(1240%) hue-rotate(312deg) brightness(93%) contrast(100%)
+    }
+}
+.txt{
+    font-size:18px;
+    line-height:1.5;
+    padding-left:20px;
+    p{
+        transform:translateX(50px);
+        opacity:0;
+        @include vars.transitionDefault((transform, opacity));
+    }
+}
+.num{
+    @include vars.flex();
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:.05;
+    color:vars.$theme;
+    font-size:150px;
+    @include vars.fontWeight(800);
+    z-index:-1;
+    span{
+        transform:rotateY(0.25turn);
+        @include vars.transitionDefault(transform, 1s);
+    }
+}
+
+@for $idx from 1 through 4{
+    dl:nth-child(#{$idx}){
+        dt{
+            transition-delay:0.1s * $idx;
+        }
+    }
+    .txt p:nth-child(#{$idx}){
+        transition-delay:0.1s * $idx + 0.4;
+    }
+    .num span:nth-child(#{$idx}){
+        transition-delay:0.3s * $idx + 0.4;
+    }
+}
+
+&.active{
+    dt, .txt p{
+        transform:translate(0);
+        opacity:1
+    }
+    .num span{
+        transform:rotateY(0)
+    }
+}

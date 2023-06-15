@@ -1,0 +1,78 @@
+$theme:#ed6075;
+
+$tablet:1200px;
+$mobile:768px;
+$landscape:500px;
+
+@mixin flex($w:flex-start, $h:flex-start, $dir:row, $wrap:wrap){
+    display:flex;
+    justify-content:$w;
+    align-items: $h;
+    flex-flow:$dir $wrap
+}
+
+@mixin pseudo($w, $h, $type:position){
+    content:"";
+    @if($type == position){
+        position:absolute
+    } @else if($type == block){
+        display:block
+    }
+    width:$w;
+    height:$h
+}
+
+@mixin circle($r:''){
+    @if($r != ''){
+        width:$r;
+        height:$r;
+    }
+    border-radius:50%
+}
+
+@mixin border($color, $w:1px, $style:solid){
+    border:$w $style $color
+}
+
+@mixin ellipsis($w){
+    max-width:$w;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden
+}
+
+@mixin fontWeight($w){
+    font-variation-settings:'wght' $w
+}
+
+@mixin transitionDefault($properties, $duration:0.8s, $ease:ease){
+    @if length($properties) == 1 {
+        transition: $properties $duration $ease;
+    } @else{
+        $transition: ();
+        @each $property in $properties {
+            $transition: append($transition, $property, $separator: comma);
+        }
+        transition-property: $transition;
+        transition-duration:$duration;
+        transition-timing-function:$ease
+    }
+}
+
+@mixin custom($width){
+    @media (max-width:$width){
+        @content
+    }
+}
+
+@mixin tablet{
+    @media (max-width:$tablet){
+        @content
+    }
+}
+
+@mixin mobile{
+    @media (max-width:$mobile){
+        @content
+    }
+}

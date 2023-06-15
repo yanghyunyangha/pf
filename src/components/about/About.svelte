@@ -1,14 +1,14 @@
 <script>
-    import styles from './style.module.css';
-    import Top from './Top.svelte';
-    import List from './List.svelte';
-    import Bgline from './Bgline.svelte';
+    import "@scss/about/style.scss";
+    import Top from "./Top.svelte";
+    import List from "./List.svelte";
+    import Bg from "./Bg.svelte";
 </script>
 
-<section class="{ styles.about }">
+<section class="about">
     <div class="inner flex-between">
-        <Top { styles } />
-        <List { styles} />
+        <Top />
+        <List />
     </div>
-    <Bgline />
+    <Bg />
 </section>
