@@ -1,0 +1,56 @@
+@use '../common/variables' as vars;
+
+.detail{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+    overflow:auto;
+    z-index:100;
+    .inner{
+        max-width:1400px;
+        padding:0 20px 40px
+    }
+
+    .top{
+        @include vars.flex(space-between, center);
+        background:#fff;
+        padding:15px 30px;
+        z-index:99
+    }
+    .info{
+        @include vars.flex();
+        dl{
+            @include vars.flex(flex-start, flex-end);
+            margin-right:40px;
+            font-size:20px
+        }
+        dt{
+            margin-right:15px
+        }
+        dd{
+            color:#878787
+        }
+        a{
+            text-decoration:underline;
+            color:vars.$theme
+        }
+    }
+
+    @include vars.tablet{
+        .info{
+            dl{
+                margin-right:3rem
+            }
+            dt{
+                margin-right:1rem
+            }
+            a{
+                display:block;
+                @include vars.ellipsis(25rem)
+            }
+        }
+    }
+}

@@ -87,6 +87,6 @@
     <About />
     <Portfolio { items } { portList } { boxMouse } { detailShow } />
 </main>
-<!-- {#if visible}
+{#if visible}
 <Detail { detailItem } { detailHide } />
-{/if} -->
+{/if}

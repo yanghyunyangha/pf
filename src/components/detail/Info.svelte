@@ -1,8 +1,8 @@
 <script>
-    export let detailItem, styles
+    export let detailItem
 </script>
 
-<div class="flex { styles.info }">
+<div class="info">
     <dl class="flex">
         <dt class="medium">NAME:</dt>
         <dd class="light">{ detailItem.name }</dd>

@@ -1,0 +1,7 @@
+.top{
+    @include vars.flex(space-between, flex-end);
+    margin-bottom:80px
+}
+.caption{
+    font-size:24px
+}

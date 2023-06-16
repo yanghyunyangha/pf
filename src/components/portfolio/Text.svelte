@@ -3,5 +3,5 @@
 </script>
 
 <div class="thumnail">
-    {object.name}
+    <img src="{ object.img }" alt="">
 </div>

@@ -1,0 +1,27 @@
+.list{
+    .card{
+        @include vars.flex(center, center);
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        font-size:24px;
+        color:#fff;
+        background:rgba(0,0,0,.7);
+        transform:translateX(-100%)
+    }
+    .type{
+        padding:10px 23px;
+        border-radius:20px;
+        font-size:16px;
+        @include vars.border(#fff);
+        margin:0 auto 15px
+    }
+    .icon{
+        position:absolute;
+        bottom:25px;
+        right:20px;
+        filter:brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(165deg) brightness(103%) contrast(101%);
+    }
+}
