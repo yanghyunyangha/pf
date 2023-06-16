@@ -8,10 +8,10 @@ const ports = [
         img: images.fasthunter
     },
     {
-        name: '8282 에어크린',
+        name: '리더스CPA',
         type: 1,
-        url: 'https://8282airclean.com/',
-        img: images.airclean
+        url: 'https://leaderscpa.com/leaderscpa',
+        img: images.cpa
     },
     {
         name: '리더스오토솔루션',
@@ -20,22 +20,22 @@ const ports = [
         img: images.las
     },
     {
-        name: '한국재무컨설팅센터',
+        name: '퍼블링',
         type: 1,
-        url: 'https://k-finco.com/',
-        img: images.finco
+        url: 'https://publing.co.kr/',
+        img: images.publing
     },
     {
-        name: '로또플라이',
+        name: '8282 에어크린',
         type: 1,
-        url: 'https://lottofly.co.kr/m/',
-        img: images.lotto
+        url: 'https://8282airclean.com/',
+        img: images.airclean
     },
     {
-        name: '스마트올중학',
+        name: '마케팅플라이',
         type: 2,
-        url: 'https://leaderscpa.com/merchant/smartallmid2/',
-        img: images.smart
+        url: 'https://mkfly.co.kr/',
+        img: images.mk
     }
 ]
 

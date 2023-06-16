@@ -41,8 +41,8 @@
         }
     }
 
-    function boxMouse(e, type){
-        boxOver(w, e, type);
+    function boxMouse(w, h, e, type){
+        boxOver(w, h, e, type);
     }
 
     function detailShow(item){

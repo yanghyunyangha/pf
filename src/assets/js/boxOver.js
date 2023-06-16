@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
 
-function boxOver(w, e, type){
+function boxOver(w, h, e, type){
     const step = Math.floor(w / 300),
-                width = w / step,
-                height = 300,
+                width = w,
+                height = h,
                 target = e.target.querySelector('.card'),
                 x = e.offsetX - width / 2,
                 y = (e.offsetY - height / 2) * (width / height),
