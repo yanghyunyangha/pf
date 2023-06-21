@@ -20,6 +20,12 @@ const ports = [
         img: images.lotto
     },
     {
+        name: '퍼블링',
+        type: 1,
+        url: 'https://publing.co.kr/',
+        img: images.publing
+    },
+    {
         name: '리더스CPA',
         type: 1,
         url: 'https://leaderscpa.com/leaderscpa',
@@ -30,12 +36,6 @@ const ports = [
         type: 2,
         url: 'https://stake-in.com/sub/guide/',
         img: images.stake
-    },
-    {
-        name: '퍼블링',
-        type: 1,
-        url: 'https://publing.co.kr/',
-        img: images.publing
     }
 ]
 

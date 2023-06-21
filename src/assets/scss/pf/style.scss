@@ -6,4 +6,18 @@
     @import './list';
     @import './card';
     
+    @include vars.tablet{
+        li{
+            grid-row-end:span 11;
+            &:first-child{
+                margin-top:56px;
+                grid-row-end:span 13
+            }
+            &:nth-child(3){
+                margin-top:140px;
+                grid-row-end:span 15
+            }
+        }
+    }
+    
 }

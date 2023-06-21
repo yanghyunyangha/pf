@@ -49,12 +49,13 @@
         detailItem = item;
         visible = true;
         document.documentElement.classList.add('forbid_scroll');
-        console.log('a')
+        lenis.stop();
     }
 
     function detailHide(){
         visible = false;
         document.documentElement.classList.remove('forbid_scroll');
+        lenis.start();
     }
 
 </script>

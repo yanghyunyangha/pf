@@ -1,10 +1,10 @@
 import { gsap } from "gsap";
 
-function boxOver(w, h, e, type){
-    const step = Math.floor(w / 300),
-                width = w,
-                height = h,
-                target = e.target.querySelector('.card'),
+function boxOver(e, type){
+    const item = e.target,
+                width = item.offsetWidth,
+                height = item.offsetHeight,
+                target = item.querySelector('.card'),
                 x = e.offsetX - width / 2,
                 y = (e.offsetY - height / 2) * (width / height),
                 d = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180 ) / 90 ) + 3 )  % 4;

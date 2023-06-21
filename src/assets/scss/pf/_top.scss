@@ -3,5 +3,11 @@
     margin-bottom:80px
 }
 .caption{
-    font-size:24px
+    font-size:24px;
+    a{
+        display:block
+    }
+}
+&.active .txt-up *{
+    transform:translateY(0)
 }
