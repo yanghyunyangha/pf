@@ -7,11 +7,6 @@
         <p class="name">{ item.name }</p>
     </div>
     <div class="txt-up type">
-        <p>
-            {#if item.type == 1} Website
-            {:else if item.type == 2} Landing
-            {:else} Script
-            {/if}
-        </p>
+        <p>{ item.type }</p>
     </div>
 </div>

@@ -5,13 +5,8 @@
 
 <div class="card">
     <div>
-        <p class="type bold">
-            {#if object.type == 1} Website
-            {:else if object.type == 2} Landing
-            {:else} Script
-            {/if}
-        </p>
-        <p class="light">{ object.name }</p>
+        <p class="type bold">{ object.type }</p>
+        <p class="light cardname">{ object.name }</p>
     </div>
     <span class="icon">
         <img { src } alt="자세히 보기">

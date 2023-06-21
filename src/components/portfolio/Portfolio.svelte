@@ -4,7 +4,7 @@
     import List from './List.svelte'
     import Bg from '../about/Bg.svelte'
 
-    export let items, portList, boxMouse, detailShow
+    export let items, portList, boxMouse, detailShow, w
 
     const list = {
         items:items,
@@ -18,7 +18,7 @@
 <section class="portfolio">
     <div class="inner">
         <Top />
-        <List { ...list } />
+        <List { ...list } { w } />
     </div>
     <Bg />
 </section>

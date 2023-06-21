@@ -1,12 +1,41 @@
 @use '/src/assets/scss/common/variables' as vars;
 
 .portfolio{
-    
+    padding-bottom:10rem;
     @import './top';
     @import './list';
     @import './card';
     
     @include vars.tablet{
+        .top{
+            margin-bottom:5vw
+        }
+        .list{
+            gap:1.5rem 2.5rem;
+            .card{
+                top:auto;
+                justify-content:flex-start;
+                padding:2rem 1.5rem 1rem;
+                background:linear-gradient(0deg, rgba(0,0,0, 1) 0%, rgba(0,0,0,0) 100%);
+                transform:translate(0) !important;
+                > div{
+                    text-align:left
+                }
+            }
+            .cardname{
+                font-size:1.8rem
+            }
+            .type{
+                margin-bottom:0.8rem;
+                padding:0.5rem 1.5rem;
+                font-size:1.1rem
+            }
+            .icon{
+                bottom:0.5rem;
+                right:1.5rem;
+                width:2.4rem
+            }
+        }
         li{
             grid-row-end:span 11;
             &:first-child{
@@ -17,6 +46,84 @@
                 margin-top:140px;
                 grid-row-end:span 15
             }
+        }
+    }
+
+    @include vars.custom(900px){
+        .caption{
+            font-size:2rem
+        }
+        li{
+            &:first-child{
+                margin-top:0;
+                grid-row-end:span 11
+            }
+            &:nth-child(3){
+                margin-top:0;
+                grid-row-end:span 11
+            }
+        }
+    }
+
+    @include vars.custom(768px){
+        .list{
+            grid-template-columns:repeat(2, 1fr);
+            .card{
+                padding:{
+                    bottom:1.5rem;
+                    top:3rem
+                }
+            }
+        }
+    }
+
+    @include vars.custom(500px){
+        .list{
+            .card{
+                padding:{
+                    left:1rem;
+                    right:1rem
+                }
+            }
+            .icon{
+                bottom:0.8rem;
+                right:1rem
+            }
+        }
+        li{
+            grid-row-end:span 8;
+            &:first-child{
+                grid-row-end:span 8
+            }
+            &:nth-child(3){
+                grid-row-end:span 8
+            }
+        }
+    }
+    
+    @include vars.custom(400px){
+        .list{
+            display:block;
+            .card{
+                padding:{
+                    left:2rem;
+                    right:2rem
+                }
+            }
+            .cardname{
+                font-size:2.4rem
+            }
+            .type{
+                font-size:1.4rem;
+                margin-bottom:1rem
+            }
+            .icon{
+                right:2rem;
+                width:2.8rem;
+            }
+        }
+        li{
+            margin-bottom:1.5rem
         }
     }
     

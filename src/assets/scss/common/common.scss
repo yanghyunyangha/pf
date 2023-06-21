@@ -46,6 +46,10 @@ body{
         font-size:8px
     }
 }
+.forbid_scroll{
+    height:100vh;
+    overflow:hidden
+}
 #app{
     @include vars.tablet{
         font-size:1rem
@@ -58,12 +62,12 @@ body{
 .main{
     section{
         position:relative;
-        padding:200px 0;
+        padding-top:200px;
         @include vars.tablet{
-            padding:15rem 0;
+            padding-top:15rem;
         }
         @include vars.custom(400px){
-            padding:10rem 0;
+            padding-top:10rem;
         }
     }
     .inner{

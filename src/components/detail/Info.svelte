@@ -3,20 +3,15 @@
 </script>
 
 <div class="info">
-    <dl class="flex">
+    <dl>
         <dt class="medium">NAME:</dt>
         <dd class="light">{ detailItem.name }</dd>
     </dl>
-    <dl class="flex">
-        <dt class="medium">TYPE:</dt>
-        <dd class="light">
-            {#if detailItem.type == 1} Website
-            {:else if detailItem.type == 2} Landing
-            {:else} Script
-            {/if}
-        </dd>
+    <dl>
+        <dt class="medium">CATEGORY:</dt>
+        <dd class="light">{ detailItem.type }</dd>
     </dl>
-    <dl class="flex">
+    <dl>
         <dt class="medium">URL:</dt>
         <dd class="light"><a href="{ detailItem.url }" target="_blank">{ detailItem.url }</a></dd>
     </dl>

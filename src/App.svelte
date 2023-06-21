@@ -62,15 +62,14 @@
 
 <svelte:window
     on:resize={ () => {
-        w = document.documentElement.clientWidth;
-        if(w <= 1200){
-            lenis.destroy()
-        }
+        w = window.innerWidth;
+        w <= 1200? lenis.destroy(): requestAnimationFrame(raf);
+        
         // setLayout(w);
         // sort == 0? setBoxLayout(items, w, 0): setBoxLayout(newItems, w, 0);
     } }
     on:load={ () => {
-        w = document.documentElement.clientWidth;
+        w = window.innerWidth;
         if(w <= 1200){
             lenis.destroy()
         }
@@ -86,7 +85,7 @@
 <Visual { w } />
 <main class="main">
     <About />
-    <Portfolio { items } { portList } { boxMouse } { detailShow } />
+    <Portfolio { items } { portList } { w } { boxMouse } { detailShow } />
 </main>
 {#if visible}
 <Detail { detailItem } { detailHide } />
