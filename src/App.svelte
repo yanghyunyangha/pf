@@ -1,4 +1,5 @@
 <script>
+    import Header from './components/header/Header.svelte';
     import Portfolio from './components/portfolio/Portfolio.svelte';
     import Detail from './components/detail/Detail.svelte';
     import Lenis from "@studio-freight/lenis";
@@ -79,6 +80,7 @@
 />
 
 <main class="main">
+    <Header />
     <Portfolio { items } { portList } { w } { boxMouse } { detailShow } />
 </main>
 {#if visible}

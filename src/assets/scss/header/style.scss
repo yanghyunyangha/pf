@@ -1,0 +1,67 @@
+@use '/src/assets/scss/common/variables' as vars;
+
+.header{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:99;
+    .inner{
+        @include vars.flex(space-between, center);
+        padding:30px 200px
+    }
+    .logo{
+        width:40px;
+    }
+    .menus{
+        @include vars.flex(space-between);
+        width:25%;
+        min-width:400px;
+        color:#878787;
+        button{
+            position:relative;
+            &::after{
+                @include vars.pseudo(120%, 4px);
+                left:-10%;
+                top:calc(50% - 2px);
+                background:vars.$theme;
+                opacity:0;
+                z-index:-1;
+                transform:scale(0);
+                @include vars.transitionDefault((transform, opacity), 0.4s)
+            }
+            &:hover{   
+                color:vars.$theme;
+                &::after{
+                    transform:scale(1);
+                    opacity:.3
+                }
+            }
+        }
+    }
+    @include vars.custom(1500px){
+        .inner{
+            padding:30px 10vw
+        }
+        .menus{
+            min-width:26vw
+        }
+    }
+    @include vars.tablet{
+        .inner{
+            padding:1.875rem 6.6vw
+        }
+    }
+    @include vars.custom(400px){
+        .logo{
+            width:4rem
+        }
+        .menus{
+            min-width:auto;
+            width:auto
+        }
+        .menus li{
+            margin-left:2rem
+        }
+    }
+}
