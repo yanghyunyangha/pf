@@ -1,11 +1,7 @@
 <script>
-    import Header from "./components/header/Header.svelte";
-    import Visual from './components/visual/Visual.svelte';
-    import About from './components/about/About.svelte';
     import Portfolio from './components/portfolio/Portfolio.svelte';
     import Detail from './components/detail/Detail.svelte';
     import Lenis from "@studio-freight/lenis";
-    import { setLayout } from './assets/js/setLayout';
     import { setBoxLayout } from './assets/js/setBoxLayout';
     import { boxOver } from './assets/js/boxOver';
     import { ports } from './assets/js/portfolio';
@@ -63,18 +59,18 @@
 <svelte:window
     on:resize={ () => {
         w = window.innerWidth;
-        w <= 1200? lenis.destroy(): requestAnimationFrame(raf);
-        
-        // setLayout(w);
-        // sort == 0? setBoxLayout(items, w, 0): setBoxLayout(newItems, w, 0);
+        if(w <= 1200){
+            lenis.destroy()
+        }
     } }
     on:load={ () => {
         w = window.innerWidth;
         if(w <= 1200){
             lenis.destroy()
         }
-        // setLayout(w)
-        // setBoxLayout(items, w, 0);
+        
+        const scts = document.querySelectorAll('.main section');
+        scrollActive(scts);
     } }
     on:scroll={ () => {
         const scts = document.querySelectorAll('.main section');
@@ -82,9 +78,7 @@
     } }
 />
 
-<Visual { w } />
 <main class="main">
-    <About />
     <Portfolio { items } { portList } { w } { boxMouse } { detailShow } />
 </main>
 {#if visible}
