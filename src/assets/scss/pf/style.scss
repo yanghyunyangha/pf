@@ -2,6 +2,7 @@
 
 .portfolio{
     padding-bottom:10rem;
+    z-index:1;
     @import './top';
     @import './list';
     @import './card';
@@ -36,32 +37,14 @@
                 width:2.4rem
             }
         }
-        li{
-            grid-row-end:span 11;
-            &:first-child{
-                margin-top:56px;
-                grid-row-end:span 13
-            }
-            &:nth-child(3){
-                margin-top:140px;
-                grid-row-end:span 15
-            }
+        .item{
+            grid-row-end:span 11
         }
     }
 
     @include vars.custom(900px){
         .caption{
             font-size:2rem
-        }
-        li{
-            &:first-child{
-                margin-top:0;
-                grid-row-end:span 11
-            }
-            &:nth-child(3){
-                margin-top:0;
-                grid-row-end:span 11
-            }
         }
     }
 
@@ -90,14 +73,8 @@
                 right:1rem
             }
         }
-        li{
-            grid-row-end:span 8;
-            &:first-child{
-                grid-row-end:span 8
-            }
-            &:nth-child(3){
-                grid-row-end:span 8
-            }
+        .item{
+            grid-row-end:span 8
         }
     }
     
@@ -122,7 +99,7 @@
                 width:2.8rem;
             }
         }
-        li{
+        .item{
             margin-bottom:1.5rem
         }
     }

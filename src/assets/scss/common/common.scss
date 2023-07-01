@@ -26,6 +26,7 @@ body{
     font:400 16px/1 'mont', 'pre';
 	@include vars.fontWeight(400);
 	color:#272727;
+    background:#f7f7f7;
 	letter-spacing:-.04em;
 	word-break: keep-all;
 	touch-action:manipulation;
@@ -62,7 +63,7 @@ body{
 .main{
     section{
         position:relative;
-        padding-top:200px;
+        padding-top:100px;
         @include vars.tablet{
             padding-top:15rem;
         }
@@ -119,5 +120,5 @@ body{
     }
 }
 .bgline span:nth-child(n+1){
-    border-left:1px solid rgba(0,0,0,.05)
+    border-left:1px solid rgba(0,0,0,.1)
 }

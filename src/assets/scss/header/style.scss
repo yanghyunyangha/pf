@@ -12,6 +12,7 @@
     }
     .logo{
         width:40px;
+        filter:brightness(0) saturate(100%) invert(12%) sepia(16%) saturate(19%) hue-rotate(8deg) brightness(92%) contrast(90%)
     }
     .menus{
         @include vars.flex(space-between);

@@ -2,18 +2,30 @@
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     grid-auto-rows:10px;
-    gap:18px 50px
+    gap:30px
 }
-li{
-    grid-row-end:span 13;
-    &:first-child{
-        margin-top:56px;
-        grid-row-end:span 15
+.item{
+    grid-row-end:span 10
+}
+.about{
+    position:relative;
+    @include vars.flex(flex-start, flex-start, column);
+    
+    padding:20px;
+    .title{
+        margin-bottom:10px
     }
-    &:nth-child(3){
-        margin-top:140px;
-        grid-row-end:span 18
+    .circle{
+        position:absolute;
+        top:0;
+        left:0;
+        @include vars.circle(120px);
+        background:vars.$theme;
+        opacity:0.3;
+        z-index:-1
     }
+}
+.box{
     button{
         position:relative;
         width:100%;
