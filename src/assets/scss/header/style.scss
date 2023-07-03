@@ -7,6 +7,9 @@
     right:0;
     background:#f7f7f7;
     z-index:99;
+    &.scrolled{
+        box-shadow:0 5px 10px rgba(0,0,0,.1)
+    }
     .inner{
         @include vars.flex(space-between, center);
         padding:30px 200px

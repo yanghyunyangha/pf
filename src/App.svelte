@@ -74,8 +74,10 @@
         scrollActive(scts);
     } }
     on:scroll={ () => {
-        const scts = document.querySelectorAll('.main section');
+        const scts = document.querySelectorAll('.main section'),
+            header = document.querySelector('.header');
         scrollActive(scts);
+        window.scrollY > 0? header.classList.add('scrolled'): header.classList.remove('scrolled');
     } }
 />
 
