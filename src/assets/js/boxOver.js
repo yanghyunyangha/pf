@@ -10,15 +10,15 @@ function boxOver(e, type){
                 d = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180 ) / 90 ) + 3 )  % 4;
 
     if(type == 'enter'){
-        d == 0? gsap.fromTo(target, {x:0, y:'-100%'}, {y:0, x:0, duration:0.4}):
-        d == 1? gsap.fromTo(target, {x:'100%', y:0}, {y:0, x:0, duration:0.4}):
-        d == 2? gsap.fromTo(target, {x:0, y:'100%'}, {y:0, x:0, duration:0.4}):
-        gsap.fromTo(target, {x:'-100%', y:0}, {y:0, x:0, duration:0.4});
+        d == 0? gsap.fromTo(target, {x:0, y:'-101%'}, {y:0, x:0, duration:0.4}):
+        d == 1? gsap.fromTo(target, {x:'101%', y:0}, {y:0, x:0, duration:0.4}):
+        d == 2? gsap.fromTo(target, {x:0, y:'101%'}, {y:0, x:0, duration:0.4}):
+        gsap.fromTo(target, {x:'-101%', y:0}, {y:0, x:0, duration:0.4});
     } else{
-        d == 0? gsap.to(target, {y:'-100%', duration:0.4}): 
-        d == 1? gsap.to(target, {x:'100%', duration:0.4}):
-        d == 2? gsap.to(target, {y:'100%', duration:0.4}):
-        gsap.to(target, {x:'-100%', duration:0.4})
+        d == 0? gsap.to(target, {y:'-101%', duration:0.4}): 
+        d == 1? gsap.to(target, {x:'101%', duration:0.4}):
+        d == 2? gsap.to(target, {y:'101%', duration:0.4}):
+        gsap.to(target, {x:'-101%', duration:0.4})
     }
     
 }

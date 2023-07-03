@@ -1,10 +1,11 @@
 @use '/src/assets/scss/common/variables' as vars;
 
 .header{
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     right:0;
+    background:#f7f7f7;
     z-index:99;
     .inner{
         @include vars.flex(space-between, center);
