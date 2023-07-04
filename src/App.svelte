@@ -1,11 +1,11 @@
 <script>
-    import Header from './components/header/Header.svelte';
-    import Portfolio from './components/portfolio/Portfolio.svelte';
-    import Detail from './components/detail/Detail.svelte';
-    import Lenis from "@studio-freight/lenis";
-    import { setBoxLayout } from './assets/js/setBoxLayout';
-    import { boxOver } from './assets/js/boxOver';
-    import { ports } from './assets/js/portfolio';
+    import Header from './components/header/Header.svelte'
+    import Portfolio from './components/portfolio/Portfolio.svelte'
+    import Detail from './components/detail/Detail.svelte'
+    import './assets/js/lenis'
+    import { setBoxLayout } from './assets/js/setBoxLayout'
+    import { boxOver } from './assets/js/boxOver'
+    import { ports } from './assets/js/portfolio'
     import { scrollActive } from "./assets/js/scrollActive";
 
     let w,
@@ -17,15 +17,6 @@
         detailItem = portList[0],
         visible = false;
     $: sort = 0;
-
-    const lenis = new Lenis({
-        duration: 0.6
-    });
-    function raf(time){
-		lenis.raf(time);
-		requestAnimationFrame(raf)
-	}
-	requestAnimationFrame(raf);
 
     function sortClick(i){
         if(sort != i){

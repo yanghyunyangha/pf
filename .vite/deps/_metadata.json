@@ -1,59 +1,65 @@
 {
-  "hash": "bb1c5c89",
-  "browserHash": "43201fab",
+  "hash": "213f46b3",
+  "browserHash": "0293cfa6",
   "optimized": {
     "svelte/animate": {
       "src": "../../.yarn/cache/svelte-npm-3.59.1-284b2b0695-bd4344f01a.zip/node_modules/svelte/animate/index.mjs",
       "file": "svelte_animate.js",
-      "fileHash": "270d8e60",
+      "fileHash": "e8a24cbe",
       "needsInterop": false
     },
     "svelte/easing": {
       "src": "../../.yarn/cache/svelte-npm-3.59.1-284b2b0695-bd4344f01a.zip/node_modules/svelte/easing/index.mjs",
       "file": "svelte_easing.js",
-      "fileHash": "97324bac",
+      "fileHash": "64caae96",
       "needsInterop": false
     },
     "svelte/internal": {
       "src": "../../.yarn/cache/svelte-npm-3.59.1-284b2b0695-bd4344f01a.zip/node_modules/svelte/internal/index.mjs",
       "file": "svelte_internal.js",
-      "fileHash": "c79447eb",
+      "fileHash": "c1dd926d",
       "needsInterop": false
     },
     "svelte/motion": {
       "src": "../../.yarn/cache/svelte-npm-3.59.1-284b2b0695-bd4344f01a.zip/node_modules/svelte/motion/index.mjs",
       "file": "svelte_motion.js",
-      "fileHash": "aef8aa08",
+      "fileHash": "02c6eff8",
       "needsInterop": false
     },
     "svelte/store": {
       "src": "../../.yarn/cache/svelte-npm-3.59.1-284b2b0695-bd4344f01a.zip/node_modules/svelte/store/index.mjs",
       "file": "svelte_store.js",
-      "fileHash": "9be9bf69",
+      "fileHash": "5e14ec93",
       "needsInterop": false
     },
     "svelte/transition": {
       "src": "../../.yarn/cache/svelte-npm-3.59.1-284b2b0695-bd4344f01a.zip/node_modules/svelte/transition/index.mjs",
       "file": "svelte_transition.js",
-      "fileHash": "59a30bfb",
+      "fileHash": "a4e0fab7",
       "needsInterop": false
     },
     "svelte": {
       "src": "../../.yarn/cache/svelte-npm-3.59.1-284b2b0695-bd4344f01a.zip/node_modules/svelte/index.mjs",
       "file": "svelte.js",
-      "fileHash": "a96388ee",
+      "fileHash": "5bdabd5f",
       "needsInterop": false
     },
     "@studio-freight/lenis": {
       "src": "../../.yarn/cache/@studio-freight-lenis-npm-1.0.16-d552efa3b2-9a1536154a.zip/node_modules/@studio-freight/lenis/dist/lenis.modern.mjs",
       "file": "@studio-freight_lenis.js",
-      "fileHash": "10daad0a",
+      "fileHash": "203a15d8",
       "needsInterop": false
     },
     "gsap": {
       "src": "../../.yarn/cache/gsap-npm-3.11.5-4a6dff472e-0d62c9405e.zip/node_modules/gsap/index.js",
       "file": "gsap.js",
-      "fileHash": "54cf6441",
+      "fileHash": "98dd29cf",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../.yarn/cache/gsap-npm-3.11.5-4a6dff472e-0d62c9405e.zip/node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "28ab297b",
       "needsInterop": false
     }
   },
